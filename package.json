@@ -4,11 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+ "dev": "vite",
+ "build": "tsc -b && vite build",
+ "lint": "eslint .",
+ "preview": "vite preview",
+ "test": "vitest"
+ },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.1",
     "axios": "^1.7.9",
@@ -41,12 +42,5 @@
     "typescript-eslint": "^8.18.2",
     "vite": "^6.0.5",
     "vitest": "^3.2.4"
-  },
-   "scripts": {
- "dev": "vite",
- "build": "tsc -b && vite build",
- "lint": "eslint .",
- "preview": "vite preview",
- "test": "vitest"
- }
+  }
 }

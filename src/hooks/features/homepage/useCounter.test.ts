@@ -1,4 +1,4 @@
-import { renderHook, act } from '@testing-library/react-hooks';
+import { renderHook, act } from '@testing-library/react';
 import useCounter from './useCounter';
 
 describe('useCounter', () => {
@@ -17,9 +17,12 @@ describe('useCounter', () => {
   });
 
   it('should increment count by updated val', () => {
-    const { result } = renderHook(() => useCounter());
+    const { result, rerender } = renderHook(() => useCounter());
     act(() => {
       result.current.setVal(5);
+    });
+    rerender();
+    act(() => {
       result.current.increment();
     });
     expect(result.current.count).toBe(5);
